@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('404'))
+@section('title', __('500'))
 
 @section('content')
     @include('layouts.partials.navbar.public')

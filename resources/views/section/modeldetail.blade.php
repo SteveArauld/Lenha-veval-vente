@@ -169,7 +169,8 @@
                                                 <div class="media">
                                                     <div class="media-left media-top pull-left">
                                                         <img width="50" height="50"
-                                                             src="${product.images[0] || ''}"
+                                                            src="{{ asset('${product.images[0]}') }}"
+
                                                              class="attachment-50x50 size-50x50 wp-post-image" alt="${product.title}"
                                                              decoding="async">
                                                     </div>
@@ -222,7 +223,7 @@
                                                 <div class="woocommerce-product-gallery__wrapper" id="${galleryId}">
                                                     <div class="main-image-container" style="position: relative; margin-bottom: 15px; width: 100%">
                                                         <img id="main-image-${product.id}"
-                                                             src="${product.images[0] || ''}"
+                                                             src="{{ asset('${product.images[0]}') }}"
                                                              alt="${product.title}"
                                                              class="wp-post-image main-product-image"
                                                              style="width: 100%; height: 400px; object-fit: contain; background: #f5f5f5; border-radius: 8px; padding: 10px;">
@@ -290,7 +291,7 @@
                                                     <div class="mobile-infor-wrapper d-none">
                                                         <div class="d-flex">
                                                             <div class="me-3">
-                                                                <img width="100" height="100" src="${product.images[0] || ''}"
+                                                                <img width="100" height="100" src="{{ asset('${product.images[0]}') }}"
                                                                      class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail"
                                                                      alt="${product.title}" decoding="async">
                                                             </div>
@@ -602,3 +603,166 @@
         });
     });
 </script>
+
+
+<style
+        id="elementor-post-3068">.elementor-3068 .elementor-element.elementor-element-29ff4f4 {
+        border-style: solid;
+        border-width: 1px 1px 1px 1px;
+        border-color: #F55F1E;
+        margin-top: 37px;
+        margin-bottom: 0px;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-29ff4f4, .elementor-3068 .elementor-element.elementor-element-29ff4f4 > .elementor-background-overlay {
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-7114f96 .elementor-button {
+        background-color: #F55F1E;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        border-radius: 3px 3px 3px 3px;
+        padding: 3px 8px 3px 8px;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-7114f96 {
+        margin: -16px 0px calc(var(--kit-widget-spacing, 0px) + 0px) 0px;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-48884e7:not(.elementor-motion-effects-element-type-background), .elementor-3068 .elementor-element.elementor-element-48884e7 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+        background-color: #9E5033;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-48884e7 {
+        transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+        padding: 16px 40px 17px 40px;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-48884e7 > .elementor-background-overlay {
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-3e43a0e > div.elementor-element-populated {
+        padding: 0px 30px 0px 30px !important;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-b333598 .elementor-icon-box-title {
+        margin-block-end: 7px;
+        color: #FFFFFF;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-b333598 .elementor-icon-box-title, .elementor-3068 .elementor-element.elementor-element-b333598 .elementor-icon-box-title a {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-b333598 .elementor-icon-box-description {
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-73ccedf > div.elementor-element-populated {
+        padding: 0px 30px 0px 30px !important;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-9f71d2b .elementor-icon-box-title {
+        margin-block-end: 7px;
+        color: #FFFFFF;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-9f71d2b .elementor-icon-box-title, .elementor-3068 .elementor-element.elementor-element-9f71d2b .elementor-icon-box-title a {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-9f71d2b .elementor-icon-box-description {
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-6b1e690 > div.elementor-element-populated {
+        padding: 0px 30px 0px 30px !important;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-4aed4d7 .elementor-icon-box-title {
+        margin-block-end: 7px;
+        color: #FFFFFF;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-4aed4d7 .elementor-icon-box-title, .elementor-3068 .elementor-element.elementor-element-4aed4d7 .elementor-icon-box-title a {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+
+    .elementor-3068 .elementor-element.elementor-element-4aed4d7 .elementor-icon-box-description {
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    @media (max-width: 1024px) {
+        .elementor-3068 .elementor-element.elementor-element-48884e7 {
+            padding: 16px 0px 16px 0px;
+        }
+
+        .elementor-3068 .elementor-element.elementor-element-3e43a0e > div.elementor-element-populated {
+            padding: 0px 15px 0px 15px !important;
+        }
+
+        .elementor-3068 .elementor-element.elementor-element-73ccedf > div.elementor-element-populated {
+            padding: 0px 15px 0px 15px !important;
+        }
+
+        .elementor-3068 .elementor-element.elementor-element-6b1e690 > div.elementor-element-populated {
+            padding: 0px 15px 0px 15px !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .elementor-3068 .elementor-element.elementor-element-3e43a0e > div.elementor-element-populated {
+            padding: 15px 15px 15px 15px !important;
+        }
+
+        .elementor-3068 .elementor-element.elementor-element-b333598 .elementor-icon-box-title {
+            margin-block-end: 0px;
+        }
+
+        .elementor-3068 .elementor-element.elementor-element-b333598 .elementor-icon-box-title, .elementor-3068 .elementor-element.elementor-element-b333598 .elementor-icon-box-title a {
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        .elementor-3068 .elementor-element.elementor-element-73ccedf > .elementor-element-populated {
+            margin: 0px 0px 15px 0px;
+            --e-column-margin-right: 0px;
+            --e-column-margin-left: 0px;
+        }
+
+        .elementor-3068 .elementor-element.elementor-element-9f71d2b .elementor-icon-box-title {
+            margin-block-end: 0px;
+        }
+
+        .elementor-3068 .elementor-element.elementor-element-9f71d2b .elementor-icon-box-title, .elementor-3068 .elementor-element.elementor-element-9f71d2b .elementor-icon-box-title a {
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        .elementor-3068 .elementor-element.elementor-element-6b1e690 > div.elementor-element-populated {
+            padding: 0px 15px 15px 15px !important;
+        }
+
+        .elementor-3068 .elementor-element.elementor-element-4aed4d7 .elementor-icon-box-title {
+            margin-block-end: 0px;
+        }
+
+        .elementor-3068 .elementor-element.elementor-element-4aed4d7 .elementor-icon-box-title, .elementor-3068 .elementor-element.elementor-element-4aed4d7 .elementor-icon-box-title a {
+            font-size: 20px;
+        }
+    }</style>

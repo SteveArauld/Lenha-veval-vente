@@ -205,7 +205,7 @@ class HomeController extends Controller
             return number_format(floatval($price), 2, ',', ' ');
         };
 
-        //dd($nextProduct);
+        //dd($relatedProducts);
 
 
 

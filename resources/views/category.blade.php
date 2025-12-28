@@ -205,79 +205,66 @@
                                                             </a>
                                                         </figure>
 
-                                                        {{--   <div class="group-buttons">
-                                                               <div class="add-cart" title="Adicionar">
-                                                                   <a href="{{ $product['add_to_cart_url'] }}"
-                                                                      aria-describedby="woocommerce_loop_add_to_cart_link_describedby_{{ $product['id'] }}"
-                                                                      data-quantity="1"
-                                                                      class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                      data-product_id="{{ $product['id'] }}"
-                                                                      data-product_sku="{{ $product['sku'] }}"
-                                                                      aria-label="Adiciona ao carrinho: &ldquo;{{ $product['title'] }}&rdquo;"
-                                                                      rel="nofollow"
-                                                                      data-success_message="&ldquo;{{ $product['title'] }}&rdquo; foi adicionado ao seu carrinho">
-                                                                       <span class="title-cart">Adicionar</span>
-                                                                       <i class="tb-icon tb-icon-bag-2"></i>
-                                                                   </a>
-                                                                   <span id="woocommerce_loop_add_to_cart_link_describedby_{{ $product['id'] }}"
-                                                                         class="screen-reader-text"></span>
-                                                               </div>
-                                                               <div class="button-wishlist shown-mobile" title="Lista de desejos">
-                                                                   <div class="yith-add-to-wishlist-button-block"
-                                                                        data-product-id="{{ $product['id'] }}"
-                                                                        data-attributes="{&quot;kind&quot;:&quot;button&quot;}"></div>
-                                                               </div>
-                                                               <div class="tbay-quick-view">
-                                                                   <a href="#" class="qview-button" title="Visualização Rápida"
-                                                                      data-effect="mfp-move-from-top" data-product_id="{{ $product['id'] }}">
-                                                                       <i class="tb-icon tb-icon-eye"></i>
-                                                                       <span>Visualização Rápida</span>
-                                                                   </a>
-                                                               </div>
-                                                           </div>--}}
 
                                                         <div class="group-buttons">
-                                                            <div class="add-cart" title="Adicionar"><a
-                                                                    href="index98b6.html?add-to-cart=5527"
-                                                                    aria-describedby="woocommerce_loop_add_to_cart_link_describedby_5527"
-                                                                    data-quantity="1"
-                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                    data-product_id="5527" data-product_sku="53745527"
-                                                                    aria-label="Adiciona ao carrinho: “Estufa a Lenha Vulkan 14kW”"
-                                                                    rel="nofollow"
-                                                                    data-success_message="“Estufa a Lenha Vulkan 14kW” foi adicionado ao seu carrinho"><span
-                                                                        class="title-cart">Adicionar</span><i
-                                                                        class="tb-icon tb-icon-bag-2"></i></a> <span
-                                                                    id="woocommerce_loop_add_to_cart_link_describedby_5527"
-                                                                    class="screen-reader-text">
-                    </span>
+                                                            {{-- add-to-cart-mobile.blade.php --}}
+
+
+
+                                                            <div class="add-cart mobile-visible" title="Adicionar">
+                                                                <a href="javascript:void(0);"
+                                                                   data-product-id="{{ $product['id'] }}"
+                                                                   data-product-title="{{ $product['title'] }}"
+                                                                   data-product-price="{{ $product['price'] }}"
+                                                                   data-product-image="{{ asset($product['images'][0]) }}"
+                                                                   data-product-slug="{{ $product['slug'] }}"
+                                                                   class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                   aria-label="Adiciona ao carrinho: &ldquo;{{ $product['title'] }}&rdquo;">
+                                                                    <span class="title-cart">Adicionar</span>
+                                                                    <i class="tb-icon tb-icon-bag-2"></i>
+                                                                </a>
                                                             </div>
+
+
+
                                                             <div class="button-wishlist shown-mobile"
                                                                  title="Lista de desejos">
                                                                 <div
-                                                                    class="yith-add-to-wishlist-button-block yith-add-to-wishlist-button-block--initialized"
-                                                                    data-product-id="5527"
-                                                                    data-attributes="{&quot;kind&quot;:&quot;button&quot;}">
-                                                                    <a class="yith-wcwl-add-to-wishlist-button yith-wcwl-add-to-wishlist-button--anchor yith-wcwl-add-to-wishlist-button--loading yith-wcwl-add-to-wishlist-button--first-loading">
+                                                                        class="yith-add-to-wishlist-button-block yith-add-to-wishlist-button-block--initialized"
+                                                                        data-attributes="{&quot;kind&quot;:&quot;button&quot;}">
+                                                                    <a class="yith-wcwl-add-to-wishlist-button yith-wcwl-add-to-wishlist-button--anchor wishlist-button
+            {{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'wishlist-added' : '' }}"
+                                                                       aria-label="Add To Wishlist: &ldquo;{{ $product['title'] }}&rdquo;"
+                                                                       data-product-id="{{ $product['id'] }}"
+                                                                       data-product-title="{{ $product['title'] }}"
+                                                                       data-product-price="{{ $product['price'] }}"
+                                                                       data-product-image="{{ asset($product['images'][0]) }}"
+                                                                       data-product-slug="{{ $product['slug'] }}"
+                                                                       href="#">
                                                                         <svg
-                                                                            class="yith-wcwl-icon yith-wcwl-icon-svg yith-wcwl-add-to-wishlist-button-icon"
-                                                                            id="yith-wcwl-icon-heart-outline"
-                                                                            fill="none" stroke-width="1.5"
-                                                                            stroke="currentColor" viewBox="0 0 24 24"
-                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                                class="yith-wcwl-icon yith-wcwl-icon-svg yith-wcwl-add-to-wishlist-button-icon"
+                                                                                id="yith-wcwl-icon-heart-outline"
+                                                                                fill="{{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'red' : 'none' }}"
+                                                                                stroke-width="1.5"
+                                                                                stroke="currentColor"
+                                                                                viewBox="0 0 24 24"
+                                                                                xmlns="http://www.w3.org/2000/svg">
                                                                             <path stroke-linecap="round"
                                                                                   stroke-linejoin="round"
                                                                                   d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"></path>
                                                                         </svg>
                                                                         <span
-                                                                            class="yith-wcwl-add-to-wishlist-button__label">Add to wishlist</span></a>
+                                                                                class="yith-wcwl-add-to-wishlist-button__label">
+                {{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'Dans la liste' : 'Add to wishlist' }}
+            </span>
+                                                                    </a>
                                                                 </div>
                                                             </div>
                                                             <div class="tbay-quick-view">
                                                                 <a href="#" class="qview-button"
                                                                    title="Visualização Rápida"
                                                                    data-effect="mfp-move-from-top"
-                                                                   data-product_id="5527">
+                                                                   data-product-id="{{ $product['id'] }}">
                                                                     <i class="tb-icon tb-icon-eye"></i>
                                                                     <span>Visualização Rápida</span>
                                                                 </a>
@@ -351,6 +338,7 @@
 @endsection
 
 @push('scripts')
+    @include('section.modeldetail');
 
     <script type="text/javascript" id="woof_front-js-before">
         const woof_front_nonce = "85ce159882";

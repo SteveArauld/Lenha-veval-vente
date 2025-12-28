@@ -2229,6 +2229,7 @@ span.onsale {
     right: auto;
     letter-spacing: 2px;
     width: auto;
+    z-index: 100;
 }
 
  span.onsale {
