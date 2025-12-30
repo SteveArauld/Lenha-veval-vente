@@ -1,4 +1,3 @@
-
 <div id="tbay-mobile-smartmenu" data-title="Menu" class="tbay-mmenu d-xl-none">
 
 
@@ -10,11 +9,12 @@
             </button>
         </div>
 
-        <nav id="tbay-mobile-menu-navbar" class="menu navbar navbar-offcanvas navbar-static" data-id="menu-categories-menu-icon">
+        <nav id="tbay-mobile-menu-navbar" class="menu navbar navbar-offcanvas navbar-static"
+            data-id="menu-categories-menu-icon">
             <div id="main-mobile-menu-mmenu" class="menu-categories-menu-icon-container">
                 <ul id="main-mobile-menu-mmenu-wrapper" class="menu" data-id="categories-menu-icon">
-                    @if(isset($categories) && count($categories) > 0)
-                        @foreach($categories as $categorySlug => $categoryName)
+                    @if (isset($categories) && count($categories) > 0)
+                        @foreach ($categories as $categorySlug => $categoryName)
                             <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
                                 <a class="elementor-item" href="{{ route('category', ['category' => $categorySlug]) }}">
                                     <span class="menu-title">{{ $categoryName }}</span>
@@ -22,9 +22,10 @@
                             </li>
                         @endforeach
                     @else
-                    <!-- Fallback si pas de catégories trouvées -->
+                        <!-- Fallback si pas de catégories trouvées -->
                         <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
-                            <a class="elementor-item" href="{{ route('category', ['category' => 'pellets-de-madeira']) }}">
+                            <a class="elementor-item"
+                                href="{{ route('category', ['category' => 'pellets-de-madeira']) }}">
                                 <span class="menu-title">PELLETS DE MADEIRA</span>
                             </a>
                         </li>
@@ -70,15 +71,15 @@
                 class="tb-icon tb-icon-menu"></i></a><a href="#page" class="btn btn-sm"><i
                 class="tb-icon tb-icon-cross"></i></a></div>
     <div class="mobile-logo"><a href="{{ route('home') }}"><img fetchpriority="high"
-                                                       src="/wp-content/uploads/2025/10/er-01-scaled.png"
-                                                       width="100" height="100" alt="Tugas Lenha"></a></div>
+                src="{{ asset('wp-content/uploads/2025/10/er-01-scaled.png') }}" width="70" height="100"
+                alt="Lenha Viva"></a></div>
     <div class="device-mini_cart top-cart tbay-element-mini-cart">
         <div class="tbay-offcanvas-cart sidebar-right offcanvas offcanvas-end" id="cart-offcanvas-mobile">
             <div class="offcanvas-header widget-header-cart">
                 <div class="header-cart-content">
                     <h3 class="widget-title heading-title">Carrinho de compras</h3>
-                    <a href="javascript:" class="offcanvas-close" data-bs-dismiss="offcanvas"
-                       aria-label="Close"><i class="tb-icon tb-icon-cross"></i></a>
+                    <a href="javascript:" class="offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="tb-icon tb-icon-cross"></i></a>
                 </div>
             </div>
             <div class="offcanvas-body widget_shopping_cart_content">
@@ -87,7 +88,7 @@
                         <div class="mcart-border">
                             <ul class="cart_empty ">
                                 <li><span>Seu carrinho está vazio</span></li>
-                                <li class="total"><a class="button wc-continue" href="{{ route('loja')}}">Continuar
+                                <li class="total"><a class="button wc-continue" href="{{ route('loja') }}">Continuar
                                         A Comprar<i class="tb-icon tb-icon-angle-right"></i></a></li>
                             </ul>
 
@@ -100,11 +101,11 @@
         <div class="tbay-topcart">
             <div id="cart-D7JpU" class="cart-dropdown dropdown">
                 <a class="dropdown-toggle mini-cart v2" data-bs-toggle="offcanvas"
-                   data-bs-target="#cart-offcanvas-mobile" aria-controls="cart-offcanvas-mobile"
-                   href="javascript:void(0);">
+                    data-bs-target="#cart-offcanvas-mobile" aria-controls="cart-offcanvas-mobile"
+                    href="javascript:void(0);">
                     <i class="tb-icon tb-icon-cart"></i>
                     <span class="mini-cart-items">
-									0									</span>
+                        0 </span>
                     <span>Carrinho</span>
                 </a>
             </div>
@@ -115,9 +116,8 @@
 
         <div class="tbay-search-form tbay-search-mobile">
             <form action="{{ route('loja') }}" method="get" data-parents=".topbar-device-mobile"
-                  class="searchform maia-ajax-search show-category" data-appendto=".search-results-UPGdD"
-                  data-subtitle="" data-thumbnail="1" data-price="1" data-minChars="2" data-post-type="product"
-                  data-count="5">
+                class="searchform maia-ajax-search show-category" data-appendto=".search-results-UPGdD" data-subtitle=""
+                data-thumbnail="1" data-price="1" data-minChars="2" data-post-type="product" data-count="5">
                 <div class="form-group">
                     <div class="input-group">
                         <div class="select-category input-group-addon">
@@ -125,17 +125,20 @@
                             <select name='product_cat' id='product-cat-UPGdD' class='dropdown_product_cat'>
                                 <option value='' selected='selected'>Todos</option>
                                 <option class="level-0" value="a-granel">A GRANEL&nbsp;&nbsp;(4)</option>
-                                <option class="level-0" value="caldeira-de-lenha">CALDEIRA DE LENHA&nbsp;&nbsp;(6)</option>
+                                <option class="level-0" value="caldeira-de-lenha">CALDEIRA DE LENHA&nbsp;&nbsp;(6)
+                                </option>
                                 <option class="level-0" value="chef-de-madeira">CHEF DE
                                     MADEIRA&nbsp;&nbsp;(12)
                                 </option>
                                 <option class="level-0" value="fogao-a-lenha">FOGÃO A LENHA&nbsp;&nbsp;(12)
                                 </option>
                                 <option class="level-0" value="lenha">LENHA&nbsp;&nbsp;(12)</option>
-                                <option class="level-0" value="madeira-compactada">MADEIRA COMPACTADA&nbsp;&nbsp;(4)</option>
+                                <option class="level-0" value="madeira-compactada">MADEIRA COMPACTADA&nbsp;&nbsp;(4)
+                                </option>
                                 <option class="level-0" value="madeira-de-fogo">MADEIRA DE FOGO&nbsp;&nbsp;(9)
                                 </option>
-                                <option class="level-0" value="pellets-de-madeira">PELLETS DE MADEIRA&nbsp;&nbsp;(19)</option>
+                                <option class="level-0" value="pellets-de-madeira">PELLETS DE MADEIRA&nbsp;&nbsp;(19)
+                                </option>
                                 <option class="level-0" value="pellets-de-madeira-e-pellets">PELLETS DE MADEIRA
                                     E PELLETS&nbsp;&nbsp;(8)
                                 </option>
@@ -152,15 +155,15 @@
                             <div class="tbay-preloader"></div>
                         </div>
                         <input data-style="right" type="text" placeholder="Pesquisar produtos..." name="s"
-                               required oninvalid="this.setCustomValidity('Digitar pelo menos 2 caracteres')"
-                               oninput="setCustomValidity('')" class="tbay-search form-control input-sm"/>
+                            required oninvalid="this.setCustomValidity('Digitar pelo menos 2 caracteres')"
+                            oninput="setCustomValidity('')" class="tbay-search form-control input-sm" />
 
 
                         <div class="search-results-wrapper">
-                            <div class="maia-search-results search-results-UPGdD" data-ajaxsearch="1"
-                                 data-price="1"></div>
+                            <div class="maia-search-results search-results-UPGdD" data-ajaxsearch="1" data-price="1">
+                            </div>
                         </div>
-                        <input type="hidden" name="post_type" value="product" class="post_type"/>
+                        <input type="hidden" name="post_type" value="product" class="post_type" />
                     </div>
 
                 </div>
@@ -176,7 +179,8 @@
 <div class="footer-device-mobile d-xl-none clearfix">
     <div class="list-menu-icon">
         <div class="menu-icon">
-            <a title="Início" class="home {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
+            <a title="Início" class="home {{ request()->routeIs('home') ? 'active' : '' }}"
+                href="{{ route('home') }}">
                 <span class="menu-icon-child">
                     <i class="tb-icon tb-icon-home3"></i>
                     <span>Início</span>
@@ -185,7 +189,8 @@
         </div>
 
         <div class="menu-icon">
-            <a title="Loja" class="shop {{ request()->routeIs('loja') ? 'active' : '' }}" href="{{ route('loja') }}">
+            <a title="Loja" class="shop {{ request()->routeIs('loja') ? 'active' : '' }}"
+                href="{{ route('loja') }}">
                 <span class="menu-icon-child">
                     <i class="tb-icon tb-icon-store"></i>
                     <span>Loja</span>
@@ -194,7 +199,8 @@
         </div>
 
         <div class="menu-icon">
-            <a title="Finalizar compra" class="checkout {{ request()->routeIs('carrinho') ? 'active' : '' }}" href="{{ route('carrinho') }}">
+            <a title="Finalizar compra" class="checkout {{ request()->routeIs('carrinho') ? 'active' : '' }}"
+                href="{{ route('carrinho') }}">
                 <span class="menu-icon-child">
                     <i class="icon- icon-credit-card"></i>
                     <span>Finalizar compra</span>
@@ -203,7 +209,8 @@
         </div>
 
         <div class="menu-icon">
-            <a title="Lista de desejos" class="wishlist {{ request()->routeIs('wishlist.*') ? 'active' : '' }}" href="{{ route('wishlist.index') }}">
+            <a title="Lista de desejos" class="wishlist {{ request()->routeIs('wishlist.*') ? 'active' : '' }}"
+                href="{{ route('wishlist.index') }}">
                 <span class="menu-icon-child">
                     <i class="icon- icon-heart"></i>
                     <span class="count count_wishlist"><span>0</span></span>
@@ -213,7 +220,8 @@
         </div>
 
         <div class="menu-icon">
-            <a title="Conta" class="account {{ request()->routeIs('contacto') ? 'active' : '' }}" href="{{ route('contacto') }}">
+            <a title="Conta" class="account {{ request()->routeIs('contacto') ? 'active' : '' }}"
+                href="{{ route('contacto') }}">
                 <span class="menu-icon-child">
                     <i class="tb-icon tb-icon-account"></i>
                     <span>Contacto</span>
@@ -232,14 +240,11 @@
             data-id="ab3c07f" data-element_type="section"
             data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
             <div class="elementor-container elementor-column-gap-default">
-                <div
-                    class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-08d7568"
+                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-08d7568"
                     data-id="08d7568" data-element_type="column">
                     <div class="elementor-widget-wrap elementor-element-populated">
-                        <div
-                            class="elementor-element elementor-element-3bfdaf5 elementor-widget elementor-widget-maia-site-logo w-auto elementor-widget-tbay-base"
-                            data-id="3bfdaf5" data-element_type="widget"
-                            data-widget_type="maia-site-logo.default">
+                        <div class="elementor-element elementor-element-3bfdaf5 elementor-widget elementor-widget-maia-site-logo w-auto elementor-widget-tbay-base"
+                            data-id="3bfdaf5" data-element_type="widget" data-widget_type="maia-site-logo.default">
 
                             <div class="tbay-element tbay-element-site-logo">
 
@@ -247,60 +252,65 @@
 
                                     <a href="{{ route('home') }}">
                                         <img width="100" height="1199"
-                                             src="{{asset('/wp-content/uploads/2022/01/er-01-scaled.png')}}"
-                                             class="header-logo-img" alt="" decoding="async"/> </a>
+                                            src="{{ asset('/wp-content/uploads/2022/01/er-01-scaled.png') }}"
+                                            class="header-logo-img" alt="" decoding="async" /> </a>
                                 </div>
 
                             </div>
                         </div>
                     </div>
                 </div>
-                <div
-                    class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-519d620"
+                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-519d620"
                     data-id="519d620" data-element_type="column">
                     <div class="elementor-widget-wrap elementor-element-populated">
-                        <div
-                            class="elementor-element elementor-element-8314a1b elementor-toggle-content-menu-yes elementor-widget elementor-widget-tbay-nav-menu"
+                        <div class="elementor-element elementor-element-8314a1b elementor-toggle-content-menu-yes elementor-widget elementor-widget-tbay-nav-menu"
                             data-id="8314a1b" data-element_type="widget"
                             data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;type_menu&quot;:&quot;toggle&quot;}"
                             data-widget_type="tbay-nav-menu.default">
                             <div class="elementor-widget-container">
                                 <div class="tbay-element tbay-element-nav-menu category-inside"
-                                     data-wrapper="{&quot;layout&quot;:&quot;vertical&quot;,&quot;type_menu&quot;:&quot;toggle&quot;}">
-                                    <h3 class="toggle-menu-title category-inside-title"><a
-                                            href="javascript:void(0);" class="click-show-menu menu-click"><i
+                                    data-wrapper="{&quot;layout&quot;:&quot;vertical&quot;,&quot;type_menu&quot;:&quot;toggle&quot;}">
+                                    <h3 class="toggle-menu-title category-inside-title"><a href="javascript:void(0);"
+                                            class="click-show-menu menu-click"><i
                                                 class="tb-icon tb-icon-justifyleft"></i><span>Categorias</span></a>
                                     </h3>
 
                                     <div class="category-inside-content">
-                                        <nav
-                                            class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical tbay-vertical tbay-treevertical-lv1 vertical-submenu-right"
+                                        <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical tbay-vertical tbay-treevertical-lv1 vertical-submenu-right"
                                             data-id="categories-menu-icon">
                                             <ul id="menu-1-tyy9y"
                                                 class="elementor-nav-menu menu nav navbar-nav megamenu flex-column">
 
-                                                @if(isset($categories) && count($categories) > 0)
-                                                    @foreach($categories as $categorySlug => $categoryName)
-                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
-                                                            <a class="elementor-item" href="{{ route('category', ['category' => $categorySlug]) }}">
+                                                @if (isset($categories) && count($categories) > 0)
+                                                    @foreach ($categories as $categorySlug => $categoryName)
+                                                        <li
+                                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                            <a class="elementor-item"
+                                                                href="{{ route('category', ['category' => $categorySlug]) }}">
                                                                 <span class="menu-title">{{ $categoryName }}</span>
                                                             </a>
                                                         </li>
                                                     @endforeach
                                                 @else
-                                                <!-- Fallback si pas de catégories trouvées -->
-                                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
-                                                        <a class="elementor-item" href="{{ route('category', ['category' => 'pellets-de-madeira']) }}">
+                                                    <!-- Fallback si pas de catégories trouvées -->
+                                                    <li
+                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                        <a class="elementor-item"
+                                                            href="{{ route('category', ['category' => 'pellets-de-madeira']) }}">
                                                             <span class="menu-title">PELLETS DE MADEIRA</span>
                                                         </a>
                                                     </li>
-                                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
-                                                        <a class="elementor-item" href="{{ route('category', ['category' => 'chef-de-madeira']) }}">
+                                                    <li
+                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                        <a class="elementor-item"
+                                                            href="{{ route('category', ['category' => 'chef-de-madeira']) }}">
                                                             <span class="menu-title">CHEF DE MADEIRA</span>
                                                         </a>
                                                     </li>
-                                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
-                                                        <a class="elementor-item" href="{{ route('category', ['category' => 'fogao-a-lenha']) }}">
+                                                    <li
+                                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                                        <a class="elementor-item"
+                                                            href="{{ route('category', ['category' => 'fogao-a-lenha']) }}">
                                                             <span class="menu-title">FOGÃO A LENHA</span>
                                                         </a>
                                                     </li>
@@ -313,14 +323,11 @@
                         </div>
                     </div>
                 </div>
-                <div
-                    class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-78a3c28"
+                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-78a3c28"
                     data-id="78a3c28" data-element_type="column">
                     <div class="elementor-widget-wrap elementor-element-populated">
-                        <div
-                            class="elementor-element elementor-element-6ed3584 elementor-widget__width-initial elementor-widget elementor-widget-tbay-search-form"
-                            data-id="6ed3584" data-element_type="widget"
-                            data-widget_type="tbay-search-form.default">
+                        <div class="elementor-element elementor-element-6ed3584 elementor-widget__width-initial elementor-widget elementor-widget-tbay-search-form"
+                            data-id="6ed3584" data-element_type="widget" data-widget_type="tbay-search-form.default">
                             <div class="elementor-widget-container">
                                 <div class="tbay-element tbay-element-search-form">
                                     <div class="tbay-search-form">
@@ -339,13 +346,17 @@
                                                     ->pluck('category')
                                                     ->unique()
                                                     ->mapWithKeys(function ($categorySlug) use ($categoryCounts) {
-                                                        $categoryName = strtoupper(str_replace('-', ' ', $categorySlug));
+                                                        $categoryName = strtoupper(
+                                                            str_replace('-', ' ', $categorySlug),
+                                                        );
                                                         $count = $categoryCounts[$categorySlug] ?? 0;
 
-                                                        return [$categorySlug => [
-                                                            'name' => $categoryName,
-                                                            'count' => $count
-                                                        ]];
+                                                        return [
+                                                            $categorySlug => [
+                                                                'name' => $categoryName,
+                                                                'count' => $count,
+                                                            ],
+                                                        ];
                                                     })
                                                     ->sortBy('name')
                                                     ->toArray();
@@ -353,20 +364,20 @@
                                         @endphp
 
                                         <form action="{{ route('loja') }}" method="get"
-                                              class="maia-ajax-search searchform" data-thumbnail="1"
-                                              data-subtitle="1" data-appendto=".search-results-bo7Cn"
-                                              data-price="1" data-minChars="2" data-post-type="product"
-                                              data-count="5">
+                                            class="maia-ajax-search searchform" data-thumbnail="1" data-subtitle="1"
+                                            data-appendto=".search-results-bo7Cn" data-price="1" data-minChars="2"
+                                            data-post-type="product" data-count="5">
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="select-category input-group-addon">
                                                         <select name='product_cat' id='product-cat-bo7Cn'
-                                                                class='dropdown_product_cat form-control'>
-                                                            <option value='' {{ !request('product_cat') ? 'selected' : '' }}>
+                                                            class='dropdown_product_cat form-control'>
+                                                            <option value=''
+                                                                {{ !request('product_cat') ? 'selected' : '' }}>
                                                                 Todas as categorias
                                                             </option>
 
-                                                            @foreach($categories as $categorySlug => $categoryData)
+                                                            @foreach ($categories as $categorySlug => $categoryData)
                                                                 <option class="level-0" value="{{ $categorySlug }}"
                                                                     {{ request('product_cat') == $categorySlug ? 'selected' : '' }}>
                                                                     {{ $categoryData['name'] }}&nbsp;&nbsp;({{ $categoryData['count'] }})
@@ -376,14 +387,11 @@
                                                     </div>
 
                                                     <input data-style="right" type="text"
-                                                           placeholder="Para pesquisar"
-                                                           name="s"
-                                                           value="{{ request('s') }}"
-                                                           required
-                                                           minlength="2"
-                                                           oninvalid="this.setCustomValidity('Introduza pelo menos 2 caracteres')"
-                                                           oninput="this.setCustomValidity('')"
-                                                           class="tbay-search form-control input-sm"/>
+                                                        placeholder="Para pesquisar" name="s"
+                                                        value="{{ request('s') }}" required minlength="2"
+                                                        oninvalid="this.setCustomValidity('Introduza pelo menos 2 caracteres')"
+                                                        oninput="this.setCustomValidity('')"
+                                                        class="tbay-search form-control input-sm" />
 
                                                     <div class="search-results-wrapper">
                                                         <div class="maia-search-results search-results-bo7Cn"></div>
@@ -391,25 +399,31 @@
 
                                                     <div class="button-group input-group-addon">
                                                         <button type="submit" class="button-search btn btn-sm">
-                                                            <i aria-hidden="true" class="tb-icon tb-icon-search-normal"></i>
+                                                            <i aria-hidden="true"
+                                                                class="tb-icon tb-icon-search-normal"></i>
                                                         </button>
                                                         <div class="tbay-preloader"></div>
                                                     </div>
 
-                                                    <input type="hidden" name="post_type" value="product" class="post_type"/>
+                                                    <input type="hidden" name="post_type" value="product"
+                                                        class="post_type" />
 
                                                     <!-- Garder les autres paramètres de filtre s'ils existent -->
-                                                    @if(request('min_price'))
-                                                        <input type="hidden" name="min_price" value="{{ request('min_price') }}">
+                                                    @if (request('min_price'))
+                                                        <input type="hidden" name="min_price"
+                                                            value="{{ request('min_price') }}">
                                                     @endif
-                                                    @if(request('max_price'))
-                                                        <input type="hidden" name="max_price" value="{{ request('max_price') }}">
+                                                    @if (request('max_price'))
+                                                        <input type="hidden" name="max_price"
+                                                            value="{{ request('max_price') }}">
                                                     @endif
-                                                    @if(request('stock'))
-                                                        <input type="hidden" name="stock" value="{{ request('stock') }}">
+                                                    @if (request('stock'))
+                                                        <input type="hidden" name="stock"
+                                                            value="{{ request('stock') }}">
                                                     @endif
-                                                    @if(request('orderby'))
-                                                        <input type="hidden" name="orderby" value="{{ request('orderby') }}">
+                                                    @if (request('orderby'))
+                                                        <input type="hidden" name="orderby"
+                                                            value="{{ request('orderby') }}">
                                                     @endif
                                                 </div>
                                             </div>
@@ -420,12 +434,11 @@
                         </div>
                     </div>
                 </div>
-                <div
-                    class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-d3b67e6"
+                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-d3b67e6"
                     data-id="d3b67e6" data-element_type="column"
                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                     <div class="elementor-widget-wrap elementor-element-populated">
-                       {{-- <div
+                        {{-- <div
                             class="elementor-element elementor-element-d38df21 elementor-widget w-auto elementor-widget-tbay-account"
                             data-id="d38df21" data-element_type="widget"
                             data-widget_type="tbay-account.default">
@@ -438,21 +451,20 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>--}}
+                        </div> --}}
                         <div class="elementor-element elementor-element-37426c5 elementor-widget w-auto elementor-widget-tbay-mini-cart"
-                             data-id="37426c5" data-element_type="widget"
-                             data-widget_type="tbay-mini-cart.default">
+                            data-id="37426c5" data-element_type="widget" data-widget_type="tbay-mini-cart.default">
                             <div class="elementor-widget-container">
                                 <div class="tbay-element tbay-element-mini-cart">
                                     <div class="tbay-topcart popup">
                                         <div id="cart-xsaAl" class="cart-dropdown cart-popup dropdown">
                                             <a class="dropdown-toggle mini-cart" data-bs-toggle="dropdown"
-                                               data-bs-auto-close="outside" href="javascript:void(0);"
-                                               title="Visualizar o seu carrinho de compras">
-                        <span class="cart-icon">
-                            <i class="tb-icon tb-icon-bag-happy"></i>
-                            <span class="mini-cart-items">0</span>
-                        </span>
+                                                data-bs-auto-close="outside" href="javascript:void(0);"
+                                                title="Visualizar o seu carrinho de compras">
+                                                <span class="cart-icon">
+                                                    <i class="tb-icon tb-icon-bag-happy"></i>
+                                                    <span class="mini-cart-items">0</span>
+                                                </span>
                                             </a>
                                             <div class="dropdown-menu">
                                                 <div class="widget_shopping_cart_content" id="mini-cart-content">
@@ -460,7 +472,8 @@
                                                     <div class="mini_cart_content">
                                                         <div class="mini_cart_inner">
                                                             <div class="text-center p-3">
-                                                                <div class="spinner-border spinner-border-sm" role="status">
+                                                                <div class="spinner-border spinner-border-sm"
+                                                                    role="status">
                                                                     <span class="visually-hidden">Carregando...</span>
                                                                 </div>
                                                                 <span class="ms-2">Carregando carrinho...</span>
@@ -484,22 +497,19 @@
             data-id="82fbfa0" data-element_type="section"
             data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
             <div class="elementor-container elementor-column-gap-default">
-                <div
-                    class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c26a08a"
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c26a08a"
                     data-id="c26a08a" data-element_type="column">
                     <div class="elementor-widget-wrap elementor-element-populated">
-                        <div
-                            class="elementor-element elementor-element-993930a elementor-widget elementor-widget-tbay-nav-menu"
+                        <div class="elementor-element elementor-element-993930a elementor-widget elementor-widget-tbay-nav-menu"
                             data-id="993930a" data-element_type="widget"
                             data-settings="{&quot;layout&quot;:&quot;horizontal&quot;}"
                             data-widget_type="tbay-nav-menu.default">
                             <div class="elementor-widget-container">
                                 <div class="tbay-element tbay-element-nav-menu"
-                                     data-wrapper="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;type_menu&quot;:null}">
+                                    data-wrapper="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;type_menu&quot;:null}">
 
 
-                                    <nav
-                                        class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal tbay-horizontal"
+                                    <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal tbay-horizontal"
                                         data-id="main-menu">
                                         <ul id="menu-1-hnAZU"
                                             class="elementor-nav-menu menu nav navbar-nav megamenu flex-row">
@@ -516,13 +526,15 @@
                                                 </a>
                                             </li>
 
-                                            <li class="menu-item {{ request()->routeIs('sobre-nos') ? 'active' : '' }}">
+                                            <li
+                                                class="menu-item {{ request()->routeIs('sobre-nos') ? 'active' : '' }}">
                                                 <a class="elementor-item" href="{{ route('sobre-nos') }}">
                                                     <span class="menu-title">Sobre nós</span>
                                                 </a>
                                             </li>
 
-                                            <li class="menu-item {{ request()->routeIs('contacto') ? 'active' : '' }}">
+                                            <li
+                                                class="menu-item {{ request()->routeIs('contacto') ? 'active' : '' }}">
                                                 <a class="elementor-item" href="{{ route('contacto') }}">
                                                     <span class="menu-title">Contacto</span>
                                                 </a>
@@ -537,18 +549,15 @@
                         </div>
                     </div>
                 </div>
-                <div
-                    class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-faa6dd4"
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-faa6dd4"
                     data-id="faa6dd4" data-element_type="column">
                     <div class="elementor-widget-wrap elementor-element-populated">
-                        <div
-                            class="elementor-element elementor-element-ce2e2b5 elementor-widget elementor-widget-tbay-product-recently-viewed w-auto tbay-carousel"
+                        <div class="elementor-element elementor-element-ce2e2b5 elementor-widget elementor-widget-tbay-product-recently-viewed w-auto tbay-carousel"
                             data-id="ce2e2b5" data-element_type="widget"
                             data-widget_type="tbay-product-recently-viewed.default">
                             <div class="elementor-widget-container">
 
-                                <div
-                                    class="tbay-element tbay-element-product-recently-viewed product-recently-viewed-header"
+                                <div class="tbay-element tbay-element-product-recently-viewed product-recently-viewed-header"
                                     data-wrapper="{&quot;layout&quot;:&quot;header&quot;}" data-column="11">
 
 

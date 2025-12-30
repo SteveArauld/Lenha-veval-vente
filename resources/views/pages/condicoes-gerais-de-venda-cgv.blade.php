@@ -3,8 +3,6 @@
 @section('title', __('Condições gerais de venda CGV'))
 
 @push('styles')
-
-
 @endpush
 
 @section('content')
@@ -53,7 +51,7 @@
 
 
 
-                        <p>Nome: Tugas Lenha, Unipessoal Lda</p>
+                        <p>Nome: Lenha Viva, Unipessoal Lda</p>
 
 
 
@@ -230,7 +228,4 @@
 @endsection
 
 @push('scripts')
-
-
-
 @endpush

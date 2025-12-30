@@ -3,8 +3,6 @@
 @section('title', __('Accueil'))
 
 @push('styles')
-
-
 @endpush
 
 @section('content')
@@ -12,7 +10,9 @@
 
     <div id="tbay-main-content" class="mm-page mm-slideout">
         <div class="title-not-breadcrumbs">
-            <div class="container"><h1 class="page-title">Finalização de compra</h1></div>
+            <div class="container">
+                <h1 class="page-title">Finalização de compra</h1>
+            </div>
         </div>
         <section id="main-container" class="container">
             <div class="row ">
@@ -39,7 +39,8 @@
 
 
                                     <li class="woocommerce-order-overview__total total">
-                                        Total: <strong><span class="woocommerce-Price-amount amount"><bdi>{{ $order['total_price'] }}&nbsp;<span
+                                        Total: <strong><span
+                                                class="woocommerce-Price-amount amount"><bdi>{{ $order['total_price'] }}&nbsp;<span
                                                         class="woocommerce-Price-currencySymbol">€</span></bdi></span></strong>
                                     </li>
 
@@ -51,10 +52,10 @@
 
 
                             </div>
-                            <p>Caro cliente,</p>
+                            {{-- <p>Caro cliente,</p>
                             <p>Obrigado pelo seu pedido. Para confirmar o seu pedido, transfira o valor do mesmo para o
                                 conta bancária do nosso gestor de contas e envie-nos por e-mail o seu comprovativo de
-                                confirmação para: contacto@tugas-lenha.com antes da entrega.</p>
+                                confirmação para: contactlehnaviva@gmail.com antes da entrega.</p>
                             <p>Titular: MARIA NEVES ALVES MAIA </p>
                             <p>IBAN: PT50 0189 0006 0642 6010 0055 5</p>
                             <p>BIC: BAPAPTPL</p>
@@ -67,13 +68,12 @@
                                     <li class="iban">IBAN: <strong>PT50 0189 0006 0642 6010 0055 5</strong></li>
                                     <li class="bic">BIC: <strong>BAPAPTPL</strong></li>
                                 </ul>
-                            </section>
+                            </section> --}}
                             <section class="woocommerce-order-details">
 
                                 <h2 class="woocommerce-order-details__title">Detalhes da encomenda</h2>
 
-                                <table
-                                    class="woocommerce-table woocommerce-table--order-details shop_table order_details">
+                                <table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
 
                                     <style>
                                         #textr {
@@ -81,57 +81,60 @@
                                         }
                                     </style>
                                     <thead>
-                                    <tr>
-                                        <th class="woocommerce-table__product-name product-name">Produto</th>
-                                        <th class="woocommerce-table__product-table product-total" id="textr">Total</th>
-                                    </tr>
+                                        <tr>
+                                            <th class="woocommerce-table__product-name product-name">Produto</th>
+                                            <th class="woocommerce-table__product-table product-total" id="textr">Total
+                                            </th>
+                                        </tr>
                                     </thead>
 
                                     <tbody>
-                                    @foreach($order['items'] as $item)
-                                        <tr class="woocommerce-table__line-item order_item">
+                                        @foreach ($order['items'] as $item)
+                                            <tr class="woocommerce-table__line-item order_item">
 
-                                            <td class="woocommerce-table__product-name product-name ">
-                                                {{ $item['title'] ?? $item['name'] ?? 'Produto' }} <strong
-                                                    class="product-quantity">×&nbsp;{{ $item['quantity'] }}</strong>
-                                            </td>
+                                                <td class="woocommerce-table__product-name product-name ">
+                                                    {{ $item['title'] ?? ($item['name'] ?? 'Produto') }} <strong
+                                                        class="product-quantity">×&nbsp;{{ $item['quantity'] }}</strong>
+                                                </td>
 
-                                            <td class="woocommerce-table__product-total product-total" id="textr">
-                                                <span class="woocommerce-Price-amount amount"><bdi>{{ ($item['price'] * $item['quantity']) }}&nbsp;<span
-                                                            class="woocommerce-Price-currencySymbol">€</span></bdi></span>
-                                            </td>
+                                                <td class="woocommerce-table__product-total product-total" id="textr">
+                                                    <span class="woocommerce-Price-amount amount"><bdi>{{ $item['price'] * $item['quantity'] }}&nbsp;<span
+                                                                class="woocommerce-Price-currencySymbol">€</span></bdi></span>
+                                                </td>
 
-                                        </tr>
-                                    @endforeach
+                                            </tr>
+                                        @endforeach
 
                                     </tbody>
 
                                     <tfoot>
-                                    <tr>
-                                        <th scope="row">Subtotal:</th>
-                                        <td id="textr"><span class="woocommerce-Price-amount amount">{{ ($order['total_price']) }}&nbsp;<span
-                                                    class="woocommerce-Price-currencySymbol">€</span></span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Envio:</th>
-                                        <td id="textr">Envio grátis</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Total:</th>
-                                        <td id="textr"><span class="woocommerce-Price-amount amount">{{ $order['total_price'] }}&nbsp;<span
-                                                    class="woocommerce-Price-currencySymbol">€</span></span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Método de pagamento:</th>
-                                        <td id="textr">{{ $order['payment_method'] }}</td>
-                                    </tr>
-                                    @if(!empty($order['order_comments']))
                                         <tr>
-                                            <th>Nota:</th>
-                                            <td id="textr">
-                                                {{ $order['order_comments'] }}                    </td>
+                                            <th scope="row">Subtotal:</th>
+                                            <td id="textr"><span
+                                                    class="woocommerce-Price-amount amount">{{ $order['total_price'] }}&nbsp;<span
+                                                        class="woocommerce-Price-currencySymbol">€</span></span></td>
                                         </tr>
-                                    @endif
+                                        <tr>
+                                            <th scope="row">Envio:</th>
+                                            <td id="textr">Envio grátis</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Total:</th>
+                                            <td id="textr"><span
+                                                    class="woocommerce-Price-amount amount">{{ $order['total_price'] }}&nbsp;<span
+                                                        class="woocommerce-Price-currencySymbol">€</span></span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Método de pagamento:</th>
+                                            <td id="textr">{{ $order['payment_method'] }}</td>
+                                        </tr>
+                                        @if (!empty($order['order_comments']))
+                                            <tr>
+                                                <th>Nota:</th>
+                                                <td id="textr">
+                                                    {{ $order['order_comments'] }} </td>
+                                            </tr>
+                                        @endif
                                     </tfoot>
                                 </table>
 
@@ -151,17 +154,19 @@
                                         <address>
                                             {{ $order['billing']['first_name'] }} {{ $order['billing']['last_name'] }}
                                             <br>{{ $order['billing']['address_1'] }}<br>
-                                            @if(!empty($order['billing']['address_2']))
+                                            @if (!empty($order['billing']['address_2']))
                                                 {{ $order['billing']['address_2'] }}<br>
                                             @endif
                                             {{ $order['billing']['city'] }}<br>
                                             {{ $order['billing']['postcode'] }}<br>
                                             {{ $order['billing']['country'] }}
-                                            @if(!empty($order['billing']['phone']))
-                                                <p class="woocommerce-customer-details--phone">{{ $order['billing']['phone'] }}</p>
+                                            @if (!empty($order['billing']['phone']))
+                                                <p class="woocommerce-customer-details--phone">
+                                                    {{ $order['billing']['phone'] }}</p>
                                             @endif
 
-                                            <p class="woocommerce-customer-details--email">{{ $order['customer']['email'] }}</p>
+                                            <p class="woocommerce-customer-details--email">
+                                                {{ $order['customer']['email'] }}</p>
 
                                         </address>
 
@@ -174,14 +179,15 @@
                                         <address>
                                             {{ $order['customer']['first_name'] }} {{ $order['customer']['last_name'] }}
                                             <br>{{ $order['customer']['address_1'] }}<br>
-                                            @if(!empty($order['customer']['address_2']))
+                                            @if (!empty($order['customer']['address_2']))
                                                 {{ $order['customer']['address_2'] }}<br>
                                             @endif
                                             {{ $order['customer']['city'] }}<br>
                                             {{ $order['customer']['postcode'] }}<br>
                                             {{ $order['customer']['country'] }}
-                                            @if(!empty($order['customer']['phone']))
-                                                <p class="woocommerce-customer-details--phone">{{ $order['customer']['phone'] }}</p>
+                                            @if (!empty($order['customer']['phone']))
+                                                <p class="woocommerce-customer-details--phone">
+                                                    {{ $order['customer']['phone'] }}</p>
                                             @endif
                                         </address>
                                     </div><!-- /.col-2 -->
@@ -206,7 +212,4 @@
 @endsection
 
 @push('scripts')
-
-
-
 @endpush

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __($categoryName ))
+@section('title', __($categoryName))
 
 @push('styles')
     <style>
@@ -58,7 +58,6 @@
             color: #555;
             line-height: 1.6;
         }
-
     </style>
 @endpush
 
@@ -69,8 +68,7 @@
 
         <div id="tbay-main-content">
             <div id="main-wrapper" class="shop-left main-wrapper ">
-                <section id="tbay-breadcrumb" style="background-color:#f4f9fc"
-                         class="tbay-breadcrumb  breadcrumbs-color">
+                <section id="tbay-breadcrumb" style="background-color:#f4f9fc" class="tbay-breadcrumb  breadcrumbs-color">
                     <div class="container ">
                         <div class="breadscrumb-inner">
                             <ol class="tbay-woocommerce-breadcrumb breadcrumb">
@@ -95,21 +93,21 @@
                                 $perPage = $lojaProducts->perPage();
                                 $currentPage = $lojaProducts->currentPage();
 
-                                $start = (($currentPage - 1) * $perPage) + 1;
+                                $start = ($currentPage - 1) * $perPage + 1;
                                 $end = min($currentPage * $perPage, $totalProducts);
                             @endphp
 
                             <p class="woocommerce-result-count" role="alert" aria-relevant="all">
-                                @if($totalProducts > 0)
-                                    A mostrar {{ $start }}&ndash;{{ $end }} de {{ $totalProducts }} resultados
+                                @if ($totalProducts > 0)
+                                    A mostrar {{ $start }}&ndash;{{ $end }} de {{ $totalProducts }}
+                                    resultados
                                 @else
                                     Nenhum resultado encontrado
                                 @endif
                             </p>
                             <div class="filter-btn-wrapper d-xl-none">
-                                <button id="button-filter-btn"
-                                        class="button-filter-btn hidden-lg hidden-md" type="submit"><i
-                                        class="tb-icon tb-icon-filter" aria-hidden="true"></i>Filtro
+                                <button id="button-filter-btn" class="button-filter-btn hidden-lg hidden-md"
+                                    type="submit"><i class="tb-icon tb-icon-filter" aria-hidden="true"></i>Filtro
                                 </button>
                             </div>
                             <div id="filter-close"></div>
@@ -117,9 +115,10 @@
                                 <span style="white-space: nowrap;">Ordenar por:</span>
                                 <form class="woocommerce-ordering" id="woof_form" method="get" style="margin: 0;">
                                     <select name="orderby" class="orderby" aria-label="Ordem da loja"
-                                            onchange="document.getElementById('woof_form').submit()"
-                                            style="border: none; background: transparent; cursor: pointer; padding: 0; margin: 0; font: inherit; color: inherit;">
-                                        <option value="menu_order" {{ request('orderby', 'menu_order') == 'menu_order' ? 'selected' : '' }}>
+                                        onchange="document.getElementById('woof_form').submit()"
+                                        style="border: none; background: transparent; cursor: pointer; padding: 0; margin: 0; font: inherit; color: inherit;">
+                                        <option value="menu_order"
+                                            {{ request('orderby', 'menu_order') == 'menu_order' ? 'selected' : '' }}>
                                             Ordenação padrão
                                         </option>
                                         <option value="title" {{ request('orderby') == 'title' ? 'selected' : '' }}>
@@ -128,7 +127,8 @@
                                         <option value="price" {{ request('orderby') == 'price' ? 'selected' : '' }}>
                                             Ordenar por preço: menor para maior
                                         </option>
-                                        <option value="price-desc" {{ request('orderby') == 'price-desc' ? 'selected' : '' }}>
+                                        <option value="price-desc"
+                                            {{ request('orderby') == 'price-desc' ? 'selected' : '' }}>
                                             Ordenar por preço: maior para menor
                                         </option>
                                     </select>
@@ -136,9 +136,9 @@
                             </div>
                             <div class="display-mode-warpper">
                                 <a href="javascript:void(0);" id="display-mode-list" class="display-mode-btn list "
-                                   title="Lista"><i class="tb-icon tb-icon-task-square"></i></a>
+                                    title="Lista"><i class="tb-icon tb-icon-task-square"></i></a>
                                 <a href="javascript:void(0);" id="display-mode-grid" class="display-mode-btn active"
-                                   title="Grade"><i class="tb-icon tb-icon-grid-2"></i></a>
+                                    title="Grade"><i class="tb-icon tb-icon-grid-2"></i></a>
                             </div>
 
                         </div>
@@ -156,9 +156,9 @@
 
                             <div class="display-products products products-grid">
                                 <div class="row" data-xlgdesktop=3 data-desktop=3 data-desktopsmall=3 data-tablet=3
-                                     data-landscape=3 data-mobile=2>
+                                    data-landscape=3 data-mobile=2>
 
-                                    @foreach($lojaProducts as $index => $product)
+                                    @foreach ($lojaProducts as $index => $product)
                                         @php
                                             $positionClasses = '';
                                             if ($index === 0) {
@@ -173,34 +173,26 @@
                                         <div
                                             class="product type-product post-{{ $product['id'] }} status-publish {{ $positionClasses }} instock {{ $product['category'] }} has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
                                             <div class="product-block grid product v1"
-                                                 data-product-id="{{ $product['id'] }}">
+                                                data-product-id="{{ $product['id'] }}">
                                                 <div class="product-content">
                                                     <div class="block-inner">
                                                         <figure class="image ">
                                                             <a title="{{ $product['title'] }}"
-                                                               href="{{ route('product.show',['slug' => $product['slug']]) }}"
-                                                               class="product-image">
-                                                                <img loading="lazy"
-                                                                     width="480"
-                                                                     height="480"
-                                                                     src="{{ asset($product['images'][0]) }}"
-                                                                     class="
-                                                                     @if(empty($product['hover_image']))
-                                                                         image-no-effect
+                                                                href="{{ route('product.show', ['slug' => $product['slug']]) }}"
+                                                                class="product-image">
+                                                                <img loading="lazy" width="480" height="480"
+                                                                    src="{{ asset($product['images'][0]) }}"
+                                                                    class="
+                                                                     @if (empty($product['hover_image'])) image-no-effect
 @else
-                                                                         image-effect attachment-shop_catalog
-@endif"
-                                                                     alt=""
-                                                                     decoding="async"/>
+                                                                         image-effect attachment-shop_catalog @endif"
+                                                                    alt="" decoding="async" />
 
-                                                                @if(!empty($product['hover_image']))
-                                                                    <img loading="lazy"
-                                                                         width="480"
-                                                                         height="480"
-                                                                         src="{{ $product['hover_image'] }}"
-                                                                         class="image-hover"
-                                                                         alt=""
-                                                                         decoding="async"/>
+                                                                @if (!empty($product['hover_image']))
+                                                                    <img loading="lazy" width="480" height="480"
+                                                                        src="{{ asset($product['hover_image']) }}"
+                                                                        class="image-hover" alt=""
+                                                                        decoding="async" />
                                                                 @endif
                                                             </a>
                                                         </figure>
@@ -213,13 +205,13 @@
 
                                                             <div class="add-cart mobile-visible" title="Adicionar">
                                                                 <a href="javascript:void(0);"
-                                                                   data-product-id="{{ $product['id'] }}"
-                                                                   data-product-title="{{ $product['title'] }}"
-                                                                   data-product-price="{{ $product['price'] }}"
-                                                                   data-product-image="{{ asset($product['images'][0]) }}"
-                                                                   data-product-slug="{{ $product['slug'] }}"
-                                                                   class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                   aria-label="Adiciona ao carrinho: &ldquo;{{ $product['title'] }}&rdquo;">
+                                                                    data-product-id="{{ $product['id'] }}"
+                                                                    data-product-title="{{ $product['title'] }}"
+                                                                    data-product-price="{{ $product['price'] }}"
+                                                                    data-product-image="{{ asset($product['images'][0]) }}"
+                                                                    data-product-slug="{{ $product['slug'] }}"
+                                                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    aria-label="Adiciona ao carrinho: &ldquo;{{ $product['title'] }}&rdquo;">
                                                                     <span class="title-cart">Adicionar</span>
                                                                     <i class="tb-icon tb-icon-bag-2"></i>
                                                                 </a>
@@ -228,43 +220,41 @@
 
 
                                                             <div class="button-wishlist shown-mobile"
-                                                                 title="Lista de desejos">
-                                                                <div
-                                                                        class="yith-add-to-wishlist-button-block yith-add-to-wishlist-button-block--initialized"
-                                                                        data-attributes="{&quot;kind&quot;:&quot;button&quot;}">
+                                                                title="Lista de desejos">
+                                                                <div class="yith-add-to-wishlist-button-block yith-add-to-wishlist-button-block--initialized"
+                                                                    data-attributes="{&quot;kind&quot;:&quot;button&quot;}">
                                                                     <a class="yith-wcwl-add-to-wishlist-button yith-wcwl-add-to-wishlist-button--anchor wishlist-button
             {{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'wishlist-added' : '' }}"
-                                                                       aria-label="Add To Wishlist: &ldquo;{{ $product['title'] }}&rdquo;"
-                                                                       data-product-id="{{ $product['id'] }}"
-                                                                       data-product-title="{{ $product['title'] }}"
-                                                                       data-product-price="{{ $product['price'] }}"
-                                                                       data-product-image="{{ asset($product['images'][0]) }}"
-                                                                       data-product-slug="{{ $product['slug'] }}"
-                                                                       href="#">
-                                                                        <svg
-                                                                                class="yith-wcwl-icon yith-wcwl-icon-svg yith-wcwl-add-to-wishlist-button-icon"
-                                                                                id="yith-wcwl-icon-heart-outline"
-                                                                                fill="{{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'red' : 'none' }}"
-                                                                                stroke-width="1.5"
-                                                                                stroke="currentColor"
-                                                                                viewBox="0 0 24 24"
-                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                        aria-label="Add To Wishlist: &ldquo;{{ $product['title'] }}&rdquo;"
+                                                                        data-product-id="{{ $product['id'] }}"
+                                                                        data-product-title="{{ $product['title'] }}"
+                                                                        data-product-price="{{ $product['price'] }}"
+                                                                        data-product-image="{{ asset($product['images'][0]) }}"
+                                                                        data-product-slug="{{ $product['slug'] }}"
+                                                                        href="#">
+                                                                        <svg class="yith-wcwl-icon yith-wcwl-icon-svg yith-wcwl-add-to-wishlist-button-icon"
+                                                                            id="yith-wcwl-icon-heart-outline"
+                                                                            fill="{{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'red' : 'none' }}"
+                                                                            stroke-width="1.5" stroke="currentColor"
+                                                                            viewBox="0 0 24 24"
+                                                                            xmlns="http://www.w3.org/2000/svg">
                                                                             <path stroke-linecap="round"
-                                                                                  stroke-linejoin="round"
-                                                                                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"></path>
+                                                                                stroke-linejoin="round"
+                                                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z">
+                                                                            </path>
                                                                         </svg>
                                                                         <span
-                                                                                class="yith-wcwl-add-to-wishlist-button__label">
-                {{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'Dans la liste' : 'Add to wishlist' }}
-            </span>
+                                                                            class="yith-wcwl-add-to-wishlist-button__label">
+                                                                            {{ in_array($product['id'], array_keys(Session::get('wishlist', []))) ? 'Dans la liste' : 'Add to wishlist' }}
+                                                                        </span>
                                                                     </a>
                                                                 </div>
                                                             </div>
                                                             <div class="tbay-quick-view">
                                                                 <a href="#" class="qview-button"
-                                                                   title="Visualização Rápida"
-                                                                   data-effect="mfp-move-from-top"
-                                                                   data-product-id="{{ $product['id'] }}">
+                                                                    title="Visualização Rápida"
+                                                                    data-effect="mfp-move-from-top"
+                                                                    data-product-id="{{ $product['id'] }}">
                                                                     <i class="tb-icon tb-icon-eye"></i>
                                                                     <span>Visualização Rápida</span>
                                                                 </a>
@@ -275,27 +265,30 @@
                                                     <span class="onsale"><span class="saled">Sale</span></span>
 
                                                     <div class="caption">
-                            <span class="price">
-                                <del aria-hidden="true">
-                                    <span class="woocommerce-Price-amount amount">
-                                        <bdi>{{ $product['old_price'] }}&nbsp;<span
-                                                class="woocommerce-Price-currencySymbol">&euro;</span></bdi>
-                                    </span>
-                                </del>
-                                <span class="screen-reader-text">O preço original era: {{ $product['old_price'] }}&nbsp;&euro;.</span>
-                                <ins aria-hidden="true">
-                                    <span class="woocommerce-Price-amount amount">
-                                        <bdi>{{ $product['price'] }}&nbsp;<span
-                                                class="woocommerce-Price-currencySymbol">&euro;</span></bdi>
-                                    </span>
-                                </ins>
-                                <span
-                                    class="screen-reader-text">O preço atual é: {{ $product['price'] }}&nbsp;&euro;.</span>
-                                <small class="woocommerce-price-suffix">IVA incluído</small>
-                            </span>
+                                                        <span class="price">
+                                                            <del aria-hidden="true">
+                                                                <span class="woocommerce-Price-amount amount">
+                                                                    <bdi>{{ $product['old_price'] }}&nbsp;<span
+                                                                            class="woocommerce-Price-currencySymbol">&euro;</span></bdi>
+                                                                </span>
+                                                            </del>
+                                                            <span class="screen-reader-text">O preço original era:
+                                                                {{ $product['old_price'] }}&nbsp;&euro;.</span>
+                                                            <ins aria-hidden="true">
+                                                                <span class="woocommerce-Price-amount amount">
+                                                                    <bdi>{{ $product['price'] }}&nbsp;<span
+                                                                            class="woocommerce-Price-currencySymbol">&euro;</span></bdi>
+                                                                </span>
+                                                            </ins>
+                                                            <span class="screen-reader-text">O preço atual é:
+                                                                {{ $product['price'] }}&nbsp;&euro;.</span>
+                                                            <small class="woocommerce-price-suffix">IVA incluído</small>
+                                                        </span>
 
                                                         <h3 class="name">
-                                                            <a href="{{ route('product.show',['slug' => $product['slug']]) }}">{{ $product['title'] }}  </a>
+                                                            <a
+                                                                href="{{ route('product.show', ['slug' => $product['slug']]) }}">{{ $product['title'] }}
+                                                            </a>
                                                         </h3>
                                                         <div class="woocommerce-product-details__short-description">
                                                             {{ $product['short_description'] ?? '' }}
@@ -311,7 +304,7 @@
                             </div>
 
                             <div style="margin-bottom: 50px">
-                                @if($lojaProducts->hasPages())
+                                @if ($lojaProducts->hasPages())
                                     <div class="tbay-pagination woocommerce-pagination" aria-label="Produto De Paginação">
                                         {{ $lojaProducts->appends(request()->except('page'))->links('vendor.pagination.custom') }}
                                     </div>
@@ -349,9 +342,9 @@
         var woof_current_page_link = location.protocol + '//' + location.host + location.pathname;
         woof_current_page_link = woof_current_page_link.replace(/\page\/[0-9]+/, "");
         woof_current_page_link = "{{ route('loja') }}";
-        var woof_link = '{{ asset("wp-content/plugins/woocommerce-products-filter/index.html") }}';
+        var woof_link = '{{ asset('wp-content/plugins/woocommerce-products-filter/index.html') }}';
 
-        var woof_ajaxurl = "{{ asset("wp-admin/admin-ajax.html") }}";
+        var woof_ajaxurl = "{{ asset('wp-admin/admin-ajax.html') }}";
 
         var woof_lang = {
             'orderby': "orderby",
@@ -368,7 +361,7 @@
         };
 
         if (typeof woof_lang_custom == 'undefined') {
-            var woof_lang_custom = {};/*!!important*/
+            var woof_lang_custom = {}; /*!!important*/
         }
 
         var woof_is_mobile = 0;
@@ -408,20 +401,24 @@
         var woof_toggle_closed_text = "+";
         var woof_toggle_opened_text = "-";
 
-        var woof_toggle_closed_image = "{{ asset("wp-content/plugins/woocommerce-products-filter/img/plus.svg") }}";
-        var woof_toggle_opened_image = "{{ asset("wp-content/plugins/woocommerce-products-filter/img/minus.svg") }}";
+        var woof_toggle_closed_image = "{{ asset('wp-content/plugins/woocommerce-products-filter/img/plus.svg') }}";
+        var woof_toggle_opened_image = "{{ asset('wp-content/plugins/woocommerce-products-filter/img/minus.svg') }}";
 
         /*indexes which can be displayed in red buttons panel*/
-        var woof_accept_array = ["min_price", "max_price", "orderby", "perpage", "woof_author", "backorder", "featured", "stock", "onsales", "byrating", "woof_sku", "woof_text", "min_rating", "product_brand", "product_visibility", "product_cat", "product_tag", "pa_color", "pa_image"];
+        var woof_accept_array = ["min_price", "max_price", "orderby", "perpage", "woof_author", "backorder", "featured",
+            "stock", "onsales", "byrating", "woof_sku", "woof_text", "min_rating", "product_brand",
+            "product_visibility", "product_cat", "product_tag", "pa_color", "pa_image"
+        ];
 
         /*for extensions*/
         var woof_ext_init_functions = null;
-        woof_ext_init_functions = '{"by_author":"woof_init_author","by_backorder":"woof_init_onbackorder","by_featured":"woof_init_featured","by_instock":"woof_init_instock","by_onsales":"woof_init_onsales","by_sku":"woof_init_sku","by_text":"woof_init_text","color":"woof_init_colors","image":"woof_init_image","label":"woof_init_labels","select_hierarchy":"woof_init_select_hierarchy","select_radio_check":"woof_init_select_radio_check","slider":"woof_init_sliders"}';
+        woof_ext_init_functions =
+            '{"by_author":"woof_init_author","by_backorder":"woof_init_onbackorder","by_featured":"woof_init_featured","by_instock":"woof_init_instock","by_onsales":"woof_init_onsales","by_sku":"woof_init_sku","by_text":"woof_init_text","color":"woof_init_colors","image":"woof_init_image","label":"woof_init_labels","select_hierarchy":"woof_init_select_hierarchy","select_radio_check":"woof_init_select_radio_check","slider":"woof_init_sliders"}';
 
         var woof_overlay_skin = "default";
 
         function woof_js_after_ajax_done() {
-             $(document).trigger('woof_ajax_done');
+            $(document).trigger('woof_ajax_done');
         }
 
         var woof_front_sd_is_a = 1;
@@ -434,7 +431,8 @@
         var woof_lang_front_builder_close = "Close";
         var woof_lang_front_builder_suggest = "Suggest the feature";
         var woof_lang_front_builder_good_to_use = "good to use in content areas";
-        var woof_lang_front_builder_confirm_sd = "Smart Designer item will be created and attached to this filter section and will cancel current type, proceed?";
+        var woof_lang_front_builder_confirm_sd =
+            "Smart Designer item will be created and attached to this filter section and will cancel current type, proceed?";
         var woof_lang_front_builder_creating = "Creating";
         var woof_lang_front_builder_shortcode = "Shortcode";
         var woof_lang_front_builder_layout = "Layout";
@@ -453,7 +451,8 @@
 
             // Charger les paramètres depuis l'URL
             urlParams.forEach(function(value, key) {
-                if (key === 'min_price' || key === 'max_price' || key === 'product_cat' || key === 'stock' || key === 'orderby' || key === 's') {
+                if (key === 'min_price' || key === 'max_price' || key === 'product_cat' || key === 'stock' ||
+                    key === 'orderby' || key === 's') {
                     woof_current_values[key] = value;
                 }
             });
@@ -472,7 +471,7 @@
 
             if (minPrice && maxPrice) {
                 // Mettre à jour le slider
-                var $slider =  $('.woof_range_slider');
+                var $slider = $('.woof_range_slider');
                 if ($slider.length) {
                     var data = $slider.data('ionRangeSlider');
                     if (data) {
@@ -489,24 +488,16 @@
         }
 
         // Appeler cette fonction au chargement de la page
-         $(document).ready(function($) {
+        $(document).ready(function($) {
             woof_load_current_values_from_url();
         });
     </script>
-    <script type="text/javascript" src="{{ asset("wp-content/plugins/woocommerce-products-filter/js/front22ef.js") }}"
-            id="woof_front-js"></script>
-
-
-
-
-
-
-
-
+    <script type="text/javascript" src="{{ asset('wp-content/plugins/woocommerce-products-filter/js/front22ef.js') }}"
+        id="woof_front-js"></script>
 @endpush
 @push('scripts')
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
 
             const listBtn = document.getElementById('display-mode-list');
             const gridBtn = document.getElementById('display-mode-grid');
@@ -533,11 +524,11 @@
             }
 
             // Clicks
-            listBtn.addEventListener('click', function () {
+            listBtn.addEventListener('click', function() {
                 setMode('list');
             });
 
-            gridBtn.addEventListener('click', function () {
+            gridBtn.addEventListener('click', function() {
                 setMode('grid');
             });
 

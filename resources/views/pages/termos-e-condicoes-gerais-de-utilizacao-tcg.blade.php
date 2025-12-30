@@ -3,8 +3,6 @@
 @section('title', __('Termos e condições gerais de utilização TCG'))
 
 @push('styles')
-
-
 @endpush
 
 @section('content')
@@ -48,7 +46,7 @@
 
 
 
-                        <p><strong>Denominação:&nbsp;</strong>Tugas Lenha, Unipessoal Lda</p>
+                        <p><strong>Denominação:&nbsp;</strong>Lenha Viva, Unipessoal Lda</p>
 
 
 
@@ -204,10 +202,9 @@
 
 
                         <figure class="wp-block-image size-large is-resized"><a
-                                href="../wp-content/uploads/2025/10/er-01-1-scaled.png"><img loading="lazy"
-                                                                                             decoding="async" width="770" height="361"
-                                                                                             src="../wp-content/uploads/2025/10/er-01-1-770x361.png" alt=""
-                                                                                             class="wp-image-6024" style="width:276px;height:auto" /></a></figure>
+                                href="../wp-content/uploads/2025/10/er-01-1-scaled.png"><img loading="lazy" decoding="async"
+                                    width="770" height="361" src="../wp-content/uploads/2025/10/er-01-1-770x361.png"
+                                    alt="" class="wp-image-6024" style="width:276px;height:auto" /></a></figure>
                     </div><!-- .site-main -->
 
                 </div><!-- .content-area -->
@@ -220,7 +217,4 @@
 @endsection
 
 @push('scripts')
-
-
-
 @endpush

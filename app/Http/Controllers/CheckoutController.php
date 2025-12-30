@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AdminOrderNotification;
+use App\Mail\OrderConfirmation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\OrderConfirmation;
-use App\Mail\AdminOrderNotification;
 use Illuminate\Support\Facades\Session;
 
 class CheckoutController extends Controller
 {
-
     protected $pays;
 
     public function __construct()
@@ -19,6 +18,7 @@ class CheckoutController extends Controller
         $this->pays = config('countries');
 
     }
+
     public function show()
     {
         $cart = session()->get('cart', []);
@@ -45,29 +45,27 @@ class CheckoutController extends Controller
             'totalPrice' => $totalPrice,
             'formattedTotalPrice' => number_format($totalPrice, 3, ',', ' '),
             'isEmpty' => empty($cart),
-            'pays' => $this->pays
+            'pays' => $this->pays,
         ]);
     }
-
-
 
     public function confirmation()
     {
         $order = session()->get('last_order');
 
-        if (!$order) {
+        if (! $order) {
             return redirect()->route('home');
         }
 
         return view('checkout.confirmation', [
-            'order' => $order
+            'order' => $order,
         ]);
     }
 
     public function store(Request $request)
     {
 
-       dd($request);
+//        dd($request);
         // Valider les données du formulaire
         $validated = $request->validate([
             'shipping_method' => 'required|string|max:255',
@@ -155,7 +153,7 @@ class CheckoutController extends Controller
             Mail::to($validated['email'])->send(new OrderConfirmation($orderData));
 
             // Envoyer la notification à l'admin
-            $adminEmail = config('mail.admin_email', 'admin@tugas-lenha.com');
+            $adminEmail = config('mail.admin_email', 'contactlehnaviva@gmail.com');
             if ($adminEmail) {
                 Mail::to($adminEmail)->send(new AdminOrderNotification($orderData));
             }
@@ -169,14 +167,16 @@ class CheckoutController extends Controller
             // Rediriger vers la page de confirmation
             return redirect()->route('checkout.confirmation')->with([
                 'order_data' => $orderData,
-                'success' => 'Sua encomenda foi recebida com sucesso!'
+                'success' => 'Sua encomenda foi recebida com sucesso!',
             ]);
 
         } catch (\Exception $e) {
-            \Log::error('Erro no checkout: ' . $e->getMessage());
+            \Log::error('Erro no checkout: '.$e->getMessage());
+
             return back()->with('error', 'Ocorreu um erro ao processar sua encomenda. Por favor, tente novamente.')->withInput();
         }
     }
+
     private function cleanPrice($price)
     {
         if (is_numeric($price)) {
@@ -190,6 +190,7 @@ class CheckoutController extends Controller
         if (is_string($price)) {
             $price = str_replace(',', '.', $price);
             $price = preg_replace('/[^\d.]/', '', $price);
+
             return (float) $price;
         }
 

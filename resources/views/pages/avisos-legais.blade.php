@@ -3,8 +3,6 @@
 @section('title', __('Avisos legais'))
 
 @push('styles')
-
-
 @endpush
 
 @section('content')
@@ -34,7 +32,7 @@
 
 
 
-                        <p>Tugas Lenha, Unipessoal Lda<br>Grossista de Madeira<br><strong>Endereço:</strong> Rua Da
+                        <p>Lenha Viva, Unipessoal Lda<br>Grossista de Madeira<br><strong>Endereço:</strong> Rua Da
                             Graça Nr. 19 Corga 3550-243 PINDO Portugal</p>
 
 
@@ -70,7 +68,7 @@
 
                         <p>O conteúdo deste site (texto e imagens) é disponibilizado aos internautas exclusivamente
                             para seu uso privado. Qualquer utilização comercial do conteúdo requer a autorização por
-                            escrito da Tugas Lenha, Unipessoal Lda. O operador deste site reserva-se o direito
+                            escrito da Lenha Viva, Unipessoal Lda. O operador deste site reserva-se o direito
                             exclusivo de utilização do texto e das imagens. As imagens não modificadas e isentas de
                             royalties estão excluídas.</p>
 
@@ -109,7 +107,7 @@
 
 
 
-                        <p>Endereço postal: LENHA VIVA Niederlassung im Tugas Lenha, Unipessoal Lda</p>
+                        <p>Endereço postal: LENHA VIVA Niederlassung im Lenha Viva, Unipessoal Lda</p>
 
 
 
@@ -122,10 +120,9 @@
 
 
                         <figure class="wp-block-image size-large is-resized"><a
-                                href="../wp-content/uploads/2025/10/er-01-1-scaled.png"><img loading="lazy"
-                                                                                             decoding="async" width="770" height="361"
-                                                                                             src="../wp-content/uploads/2025/10/er-01-1-770x361.png" alt=""
-                                                                                             class="wp-image-6024" style="width:273px;height:auto" /></a></figure>
+                                href="../wp-content/uploads/2025/10/er-01-1-scaled.png"><img loading="lazy" decoding="async"
+                                    width="770" height="361" src="../wp-content/uploads/2025/10/er-01-1-770x361.png"
+                                    alt="" class="wp-image-6024" style="width:273px;height:auto" /></a></figure>
                     </div><!-- .site-main -->
 
                 </div><!-- .content-area -->
@@ -139,7 +136,4 @@
 @endsection
 
 @push('scripts')
-
-
-
 @endpush

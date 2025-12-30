@@ -185,7 +185,7 @@
                                                                         <img loading="lazy"
                                                                              width="480"
                                                                              height="480"
-                                                                             src="{{ $product['hover_image'] }}"
+                                                                             src="{{ asset($product['hover_image']) }}"
                                                                              class="image-hover"
                                                                              alt=""
                                                                              decoding="async"/>
