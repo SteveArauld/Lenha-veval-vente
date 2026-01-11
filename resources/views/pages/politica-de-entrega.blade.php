@@ -3,8 +3,6 @@
 @section('title', __('Política de entrega'))
 
 @push('styles')
-
-
 @endpush
 
 @section('content')
@@ -127,7 +125,7 @@
 
 
 
-                        <p>Contacte o nosso serviço de apoio ao cliente através do e-mail test@exemple.com
+                        <p>Contacte o nosso serviço de apoio ao cliente através do e-mail contactlehnaviva@gmail.com
                             até 48 horas após a entrega.</p>
 
 
@@ -152,10 +150,9 @@
 
 
                         <figure class="wp-block-image size-large is-resized"><a
-                                href="../wp-content/uploads/2025/10/er-01-1-scaled.png"><img loading="lazy"
-                                                                                             decoding="async" width="770" height="361"
-                                                                                             src="../wp-content/uploads/2025/10/er-01-1-770x361.png" alt=""
-                                                                                             class="wp-image-6024" style="width:342px;height:auto" /></a></figure>
+                                href="../wp-content/uploads/2025/10/er-01-1-scaled.png"><img loading="lazy" decoding="async"
+                                    width="770" height="361" src="../wp-content/uploads/2025/10/er-01-1-770x361.png"
+                                    alt="" class="wp-image-6024" style="width:342px;height:auto" /></a></figure>
                     </div><!-- .site-main -->
 
                 </div><!-- .content-area -->
@@ -168,7 +165,4 @@
 @endsection
 
 @push('scripts')
-
-
-
 @endpush

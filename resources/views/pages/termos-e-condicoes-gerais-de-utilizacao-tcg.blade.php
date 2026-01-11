@@ -62,7 +62,7 @@
 
 
 
-                        <p>E-mail: test@exemple.com</p>
+                        <p>E-mail: contactlehnaviva@gmail.com </p>
 
 
 

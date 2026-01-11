@@ -14,7 +14,7 @@
                             <div class="elementor-icon-box-wrapper">
 
                                 <div class="elementor-icon-box-icon">
-                                    <a href="tel:000123456789" class="elementor-icon" tabindex="-1"
+                                    <a href="tel:+351925048074" class="elementor-icon" tabindex="-1"
                                         aria-label="Precisa de ajuda? Whatsapp:">
                                         <svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp-square"
                                             viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
@@ -28,12 +28,12 @@
                                 <div class="elementor-icon-box-content">
 
                                     <h3 class="elementor-icon-box-title">
-                                        <a href="tel:000123456789">
+                                        <a href="tel:+351 925 048 074">
                                             Precisa de ajuda? Whatsapp: </a>
                                     </h3>
 
                                     <p class="elementor-icon-box-description">
-                                        +351 967 054 524 </p>
+                                        +351 925 048 074 </p>
 
                                 </div>
 
@@ -120,7 +120,7 @@
                         <div class="elementor-element elementor-element-4d89dafe elementor-widget elementor-widget-text-editor"
                             data-id="4d89dafe" data-element_type="widget" data-widget_type="text-editor.default">
                             <p><span style="color: #191919;"><strong>E-mail:</strong></span>
-                                test@exemple.com</p>
+                                contactlehnaviva@gmail.com </p>
                         </div>
                         <div class="elementor-element elementor-element-4cf5ce6 elementor-widget elementor-widget-text-editor"
                             data-id="4cf5ce6" data-element_type="widget" data-widget_type="text-editor.default">
@@ -351,11 +351,11 @@
             <div class="chaty-channel-list" id="csaas-channels-0">
                 <div class="chaty-channel Whatsapp-channel-link" id="Whatsapp-0-channel" data-id="Whatsapp-0"
                     data-widget="0" data-channel="Whatsapp">
-                    <a href="https://web.whatsapp.com/send?phone=12345678&amp;text=" target="_blank"
-                        rel="nofollow noopener" aria-label="Whatsapp"
+                    <a href="https://wa.me/351925048074?text=Olá,%20gostaria%20de%20mais%20informações"
+                        target="_blank" rel="nofollow noopener" aria-label="WhatsApp"
                         class="chaty-tooltip Whatsapp-channel chaty-link chaty-whatsapp-channel pos-left"
-                        data-form="chaty-form-0-Whatsapp" data-hover="WhatsApp"><span
-                            class="chaty-icon channel-icon-Whatsapp"><span class="chaty-svg"><svg width="39"
+                        data-form="chaty-form-0-Whatsapp" data-hover="WhatsApp">
+                        <span class="chaty-icon channel-icon-Whatsapp"><span class="chaty-svg"><svg width="39"
                                     height="39" viewBox="0 0 39 39" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <circle class="color-element" cx="19.4395" cy="19.4395" r="19.4395"
@@ -367,13 +367,22 @@
                                         d="M0.196998 23.295L0.131434 23.4862L0.323216 23.4223L5.52771 21.6875C7.4273 22.8471 9.47325 23.4274 11.6637 23.4274C18.134 23.4274 23.4274 18.134 23.4274 11.6637C23.4274 5.19344 18.134 -0.1 11.6637 -0.1C5.19344 -0.1 -0.1 5.19344 -0.1 11.6637C-0.1 13.9996 0.624492 16.3352 1.93021 18.2398L0.196998 23.295ZM5.87658 19.8847L5.84025 19.8665L5.80154 19.8788L2.78138 20.8398L3.73978 17.9646L3.75932 17.906L3.71562 17.8623L3.43104 17.5777C2.27704 15.8437 1.55796 13.8245 1.55796 11.6637C1.55796 6.03288 6.03288 1.55796 11.6637 1.55796C17.2945 1.55796 21.7695 6.03288 21.7695 11.6637C21.7695 17.2945 17.2945 21.7695 11.6637 21.7695C9.64222 21.7695 7.76778 21.1921 6.18227 20.039L6.17557 20.0342L6.16817 20.0305L5.87658 19.8847Z"
                                         transform="translate(7.7758 7.77582)" fill="white" stroke="white"
                                         stroke-width="0.2"></path>
-                                </svg></span></span></a>
+                                </svg></span></span>
+                    </a>
                 </div>
+
+
+
+
+
+
                 <div class="chaty-channel Email-channel-link" id="Email-0-channel" data-id="Email-0" data-widget="0"
-                    data-channel="Email"><a href="mailto:#" target="" rel="nofollow noopener"
-                        aria-label="Email" class="chaty-tooltip Email-channel chaty-link chaty-email-channel pos-left"
-                        data-form="chaty-form-0-Email" data-hover="Email"><span
-                            class="chaty-icon channel-icon-Email"><span class="chaty-svg"><svg width="39"
+                    data-channel="Email">
+                    <a href="mailto:contactlehnaviva@gmail.com?subject=Pedido%20de%20Informa%C3%A7%C3%A3o&body=Ol%C3%A1%2C%0D%0A%0D%0AGostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20vossos%20servi%C3%A7os%20ou%20produtos.%0D%0A%0D%0AAtenciosamente%2C"
+                        target="_blank" rel="nofollow noopener" aria-label="Enviar email"
+                        class="chaty-tooltip Email-channel chaty-link chaty-email-channel pos-left"
+                        data-form="chaty-form-0-Email" data-hover="Enviar email">
+                        <span class="chaty-icon channel-icon-Email"><span class="chaty-svg"><svg width="39"
                                     height="39" viewBox="0 0 39 39" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <circle class="color-element" cx="19.4395" cy="19.4395" r="19.4395"
@@ -390,7 +399,8 @@
                                     <path
                                         d="M0.696942 7.13951C0.423104 7.13951 0.286185 7.00991 0.149265 6.88032C-0.124573 6.62112 0.012346 6.23233 0.286185 5.97314L8.63826 0.141282C9.04902 -0.117911 9.45977 0.0116855 9.59669 0.270879C9.87053 0.530073 9.73361 0.918864 9.45977 1.17806L1.1077 7.00991C0.970781 7.13951 0.833862 7.13951 0.696942 7.13951Z"
                                         transform="translate(8.47443 18.7799)" fill="white"></path>
-                                </svg></span></span></a>
+                                </svg></span></span>
+                    </a>
                 </div>
 
 

@@ -37,7 +37,7 @@
 
 
 
-                        <p><strong>E-mail:</strong> test@exemple.com<br>WhatsApp: +351 912 649 344</p>
+                        <p><strong>E-mail:</strong> contactlehnaviva@gmail.com <br>WhatsApp: +351 912 649 344</p>
 
 
 
@@ -111,7 +111,7 @@
 
 
 
-                        <p>E-mail: test@exemple.com</p>
+                        <p>E-mail: contactlehnaviva@gmail.com </p>
 
 
 

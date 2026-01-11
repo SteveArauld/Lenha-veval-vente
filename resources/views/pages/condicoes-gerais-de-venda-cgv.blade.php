@@ -67,7 +67,7 @@
 
 
 
-                        <p>E-mail: test@exemple.com</p>
+                        <p>E-mail: contactlehnaviva@gmail.com </p>
 
 
 
@@ -205,7 +205,7 @@
 
 
                         <p>Para quaisquer dúvidas ou reclamações, o cliente pode contactar o serviço de apoio ao
-                            cliente através do seguinte endereço:<br>📧 test@exemple.com</p>
+                            cliente através do seguinte endereço:<br>📧 contactlehnaviva@gmail.com </p>
 
 
 

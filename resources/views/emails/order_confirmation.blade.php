@@ -81,7 +81,7 @@
             padding-bottom: 10px;
             margin-top: 30px;
         }
-        
+
         /* Styles pour le bouton WhatsApp */
         .whatsapp-button {
             display: inline-block;
@@ -97,19 +97,19 @@
             transition: background-color 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        
+
         .whatsapp-button:hover {
             background-color: #1DA851;
             text-decoration: none;
             color: white;
         }
-        
+
         .whatsapp-icon {
             vertical-align: middle;
             margin-right: 10px;
             font-size: 20px;
         }
-        
+
         .whatsapp-container {
             text-align: center;
             margin: 30px 0;
@@ -136,13 +136,12 @@
             <div class="whatsapp-container">
                 <h3>📱 Precisa de ajuda?</h3>
                 <p>Tem alguma questão sobre a sua encomenda? Contacte-nos facilmente pelo WhatsApp!</p>
-                <a href="https://wa.me/351967054524?text=Olá! Tenho uma questão sobre a minha encomenda #{{ $order['order_number'] }}" 
-                   class="whatsapp-button" 
-                   target="_blank">
+                <a href="https://wa.me/351925048074?text=Olá! Tenho uma questão sobre a minha encomenda #{{ $order['order_number'] }}"
+                    class="whatsapp-button" target="_blank">
                     <span class="whatsapp-icon">💬</span> Contactar via WhatsApp
                 </a>
                 <p style="margin-top: 10px; font-size: 14px; color: #666;">
-                    <strong>Número:</strong> +351 967 054 524
+                    <strong>Número:</strong> +351 925 048 074
                 </p>
             </div>
 
@@ -225,9 +224,8 @@
 
             <!-- Bouton WhatsApp répété avant la fermeture -->
             <div style="text-align: center; margin: 30px 0;">
-                <a href="https://wa.me/351967054524?text=Olá! Tenho uma questão sobre a minha encomenda #{{ $order['order_number'] }}" 
-                   class="whatsapp-button" 
-                   target="_blank">
+                <a href="https://wa.me/351925048074?text=Olá! Tenho uma questão sobre a minha encomenda #{{ $order['order_number'] }}"
+                    class="whatsapp-button" target="_blank">
                     <span class="whatsapp-icon">💬</span> Contactar via WhatsApp
                 </a>
             </div>
@@ -239,7 +237,7 @@
         <div class="footer">
             <p>Lenha Viva &copy; {{ date('Y') }}</p>
             <p>Se tiver alguma questão, contacte-nos: contactlehnaviva@gmail.com</p>
-            <p><strong>WhatsApp:</strong> +351 967 054 524</p>
+            <p><strong>WhatsApp:</strong> +351 925 048 074</p>
         </div>
     </div>
 </body>
